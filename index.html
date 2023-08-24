@@ -1,289 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Caprasimo&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Rubik:wght@300;500;600&family=Titillium+Web:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Caprasimo&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Titillium+Web:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <style>
-        body {
-            overflow: hidden;
+        .item{
+            padding: 50px 70px;
         }
-
-        .container {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 1000px;
-            height: 680px;
-            padding: 50px;
-            background-color: #f4f0e9;
-            box-shadow: 0 30px 50px #dbdbdb;
-
-        }
-
-        #slide {
-            width: max-content;
-            margin-top: 50px;
-        }
-
-        .item {
-            width: 150px;
-            height: 200px;
-            display: inline-block;
-            transition: 0.5s;
-            position: absolute;
-            z-index: 1;
-            top: 50%;
-            transform: translate(0, -50%);
-            border-radius: 20px;
-            box-shadow: 0 10px 20px #797979;
-        }
-
-        .item:nth-child(1),
-        .item:nth-child(2) {
-            left: 0;
-            top: 0;
-            transform: translate(0, 0);
-            border-radius: 0;
-            width: 100%;
-            height: 100%;
-            box-shadow: none;
-        }
-
-        .item:nth-child(2) .ilk-img {
-            display: none;
-        }
-
-        .item:nth-child(3) {
-            left: 60%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .item:nth-child(3) .ilk-img {
-            width: 150px;
-        }
-
-        .item:nth-child(4) {
-            left: calc(60% + 160px);
-        }
-
-        .item:nth-child(5) {
-            left: calc(60% + 320px);
-        }
-
-        .item:nth-child(n+6) {
-            left: calc(60% + 480px);
-            opacity: 0;
-        }
-
-        .item .content {
-            position: absolute;
-            top: 50%;
-            left: 100px;
-            width: 500px;
-            text-align: center;
-            padding: 0;
-            transform: translate(0, -50%);
-            display: none;
-            font-family: system-ui;
-        }
-
-        .item:nth-child(2) .content {
+        .urun-img{
             display: block;
-            z-index: 11111;
+            margin: auto;
         }
-
-        .item .baslik {
-            color: red;
-            font-size: 26px;
-            font-weight: bold;
-            opacity: 0;
-            animation: showcontent 1s ease-in-out 1 forwards
-        }
-
-        .item .aciklama {
-            color: black;
-            margin: 20px 0;
-            opacity: 0;
-            font-size: 16px;
-            animation: showcontent 1s ease-in-out 0.3s 1 forwards
-        }
-
-        @keyframes showcontent {
-            from {
-                opacity: 0;
-                transform: translate(0, 100px);
-                filter: blur(33px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translate(0, 0);
-                filter: blur(0);
-            }
-        }
-
-        .btnYon {
-            position: absolute;
-            bottom: 30px;
-            z-index: 222222;
+        .urun-adi{
             text-align: center;
-            width: 100%;
+            font-size: 40px;
         }
+        .aciklama{
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .slide{
+            width: 250px;
+            height: 300px;
+            border: 1px solid black;
+            border-radius:5px ;
+            display: inline-block;   
+        }
+        .slider{
+            overflow: scroll ;
+        }
+        
 
-        .btnYon button {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 1px solid #555;
-            transition: 0.5s;
-        }
 
-        .btnYon button:hover {
-            background-color: #bac383;
-        }
-
-        .link {
-            background-color: white;
-            border: 2px solid #556B2F;
-            border-radius: 5px;
-            padding: 10px 20px;
-            opacity: 0;
-            animation: showcontent 1s ease-in-out 0.6s 1 forwards
-        }
-
-        .link:hover {
-            background-color: #556B2F;
-            color: white;
-        }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <div id="slide">
+    <div class="row">
+        <div class="col-6">
             <div class="item">
-                <div class="content">
-
-                    <img src="img/gece-gorsel.png" alt="" style="width: 300px;">
-                    <div class="baslik" style="color: #354f97;">Yaşlanma Karşıtı Retinol Gece Serumu</div>
-                    <div class="aciklama">From Natura Gece Serumu, Anti-age aktifi retinol (%0,5) ve aydınlatıcı,
-                        yenileyici, çabuk emilen, yüksek E vitamini, omega 6 içeren, yağ asitlerince zengin değerli
-                        yağlardan oluşmaktadır.</div>
-                    <a href="https://fromnatura.com/urun/yaslanma-karsiti-retinol-gece-serumu/">
-                        <button class="link">Ürünü İncele</button>
-                    </a>
-
-                </div>
-            </div>
-            <div class="item">
-
-                <div class="content">
-                    <img src="img/yenileyici-aydinlatici.png" alt="">
-                    <div class="baslik" style="color: #59485f;">Yenileyici ve Aydınlatıcı Göz Çevresi Serumu</div>
-                    <div class="aciklama">From Natura Göz Çevresi Serumu, jojoba çekirdeği, üzüm çekirdeği, kayısı
-                        çekirdeği, nar çekirdeği ve hodan tohumu yağı ile cildi besler. Göz çevresinde kırışıklık
-                        karşıtı bakım sağlar. Kahve çekirdeği yağı, At kestanesi yağı ve kuşburnu çekirdeği yağı göz
-                        çevresinin aydınlatılmasına yardımcı olur. İçerdiği yüksek miktar E vitamini ve Itır yağı göz
-                        çevresinde antioksidan etki gösterir.</div>
-                    <a href="https://fromnatura.com/urun/yenileyici-ve-aydinlatici-goz-cevresi-serumu/">
-                        <button class="link">Ürünü İncele</button>
-                    </a>
-                </div>
-            </div>
-            <div class="item">
-                <img class="ilk-img" src="img/argan.png" alt="">
-                <div class="content">
-                    <img src="img/argan.png" alt="">
-                    <div class="baslik" style="color: #902027;">Kuşburnu Çekirdeği Yağı</div>
-                    <div class="aciklama">From Natura Kuşburnu Çekirdeği Yağı sadece soğuk pres saf kuşburnu çekirdeği
-                        yağını içerir. Pro vitamin A, Omega-3, Omega-6, E ve C vitaminleri açısından zengindir.</div>
-                    <a href="https://fromnatura.com/urun/kusburnu-cekirdegi-yagi/">
-                        <button class="link">Ürünü İncele</button>
-                    </a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="content">
-                    <img src="img/jojoba.png" alt="" style="width: 280px;">
-                    <div class="baslik" style="color: #f9b849;">Jojoba Yağı</div>
-                    <div class="aciklama">Organik sertifikalı jojoba yağı, % 100 saf, soğuk sıkım jojoba
-                        çekirdeklerinden elde edilmiştir. Jojoba yağı, cilt sebuma benzeyen yapısı sayesinde yüksek
-                        emilim gösterir.</div>
-                    <a href="https://fromnatura.com/urun/jojoba-yagi/">
-                        <button class="link">Ürünü İncele</button>
-                    </a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="content">
-                    <img src="img/argan.png" alt="" style="width: 380px;">
-                    <div class="baslik" style="color: #d89253;">Argan Yağı</div>
-                    <div class="aciklama">From Natura Argan Yağı soğuk sıkım yöntemi ile elde edilmiştir. Oleik asit ve
-                        linoleik asit açısından oldukça zengin cilt ve saç bakım yağıdır. Cildi ve saçı besler ve
-                        nemlendirir</div>
-                    <a href="https://fromnatura.com/urun/argan-yagi/">
-                        <button class="link">Ürünü İncele</button>
-                    </a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="content">
-                    <img src="img/aspir.png" alt="" style="width: 300px;">
-                    <div class="baslik" style="color: #db711d;">Aspir Yağı</div>
-                    <div class="aciklama">From Natura Aspir Yağı, Aspir bitkisinin yapraklarından elde edilen bir
-                        bitkisel yağdır. Yaprakları, içeriğinde zengin salisilik asit barındırır. Aspir yağı da bu
-                        yaprakların damıtılmasıyla elde edilir. Cildin daha parlak ve canlı görünmesini hedeflerken
-                        içeriğindeki E vitamini ve antioksidan özelliği cildin genç bir görünüm kazanmasına yardımcı
-                        olur.</div>
-                    <a href="https://fromnatura.com/urun/aspir-yagi/">
-                        <button class="link">Ürünü İncele</button>
-                    </a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="content">
-                    <img src="img/kayisi.png" alt="" style="width: 300px;">
-                    <div class="baslik" style="color: #b55627;">Kayısı Çekirdeği Yağı</div>
-                    <div class="aciklama">From Natura Kayısı Çekirdeği Yağı, kayısı çekirdeklerinin soğuk pres
-                        yöntemiyle işlenmesiyle elde edilen saf ve doğal bir bitkisel yağdır. Bu yöntem, yağın besin
-                        değerlerinin korunmasını ve en yüksek kalitede üretilmesini sağlamaya yardımcı olur. Bu yağın
-                        birçok sağlık faydası bulunmaktadır. Antioksidan özellikleri sayesinde yaşlanmayı geciktirmeye
-                        yardımcı olurken nemlendirici özellikleri sayesinde de cildi besleyerek yumuşatmayı hedefler.
-                    </div>
-                    <a href="https://fromnatura.com/urun/kayisi-cekirdegi-yagi/">
-                        <button class="link">Ürünü İncele</button>
-                    </a>
-                </div>
+                <img class="urun-img" src="img/gece-gorsel.png" alt="">
+                <h2 class="urunAdi">Yaşlanma Karşıtı Retinol Gece Serumu</h2>
+                <p class="aciklama">From Natura Gece Serumu, Anti-age aktifi retinol (%0,5) ve aydınlatıcı,
+                    yenileyici, çabuk emilen, yüksek E vitamini, omega 6 içeren, yağ asitlerince zengin değerli
+                    yağlardan oluşmaktadır.</p>
+                <a class="btn-link" href="#">
+                    <button>Ürünü İncele</button>
+                </a>
             </div>
         </div>
-        <div class="btnYon">
-            <button id="once"><i class="fa-solid fa-angle-left"></i></button>
-            <button id="sonra"><i class="fa-solid fa-angle-right"></i></button>
+        
+        <div class="col-6">
+            <div class="slider">
+                <div class="slide">
+                    <img src="img/argan.png" alt="" style="width: 250px;">
+                </div>
+
+                <div class="slide">            
+                    <img src="img/argan.png" alt="" style="width: 250px;">
+                </div>
+
+                <div class="slide">
+                    <img src="img/argan.png" alt="" style="width: 250px;">                   
+                </div>
+
+                <div class="slide">
+                    <img src="img/argan.png" alt="" style="width: 250px;">
+                </div>
+
+                <div class="slide">
+                    <img src="img/argan.png" alt="" style="width: 250px;">
+                </div>
+
+                <div class="slide">
+                    <img src="img/argan.png" alt="" style="width: 250px;">
+                </div>
+
+                <div class="slide">
+                    <img src="img/argan.png" alt="" style="width: 250px;">
+                </div>
+
+    
+            </div>
         </div>
     </div>
 
 
     <script>
-        document.getElementById('sonra').onclick = function () {
-            let lists = document.querySelectorAll('.item');
-            document.getElementById('slide').appendChild(lists[0]);
-        }
-        document.getElementById('once').onclick = function () {
-            let lists = document.querySelectorAll('.item');
-            document.getElementById('slide').prepend(lists[lists.length - 1]);
-        }
+        var urunler=[
+            {
+                id:0,
+                imagePath:"img/yenileyici-aydinlatici.png",
+                urunAdi:"Yenileyici ve Aydınlatıcı Göz Çevresi Serumu",
+                aciklama:"From Natura Göz Çevresi Serumu, jojoba çekirdeği, üzüm çekirdeği, kayısı çekirdeği, nar çekirdeği ve hodan tohumu yağı ile cildi besler. Göz çevresinde kırışıklık karşıtı bakım sağlar. Kahve çekirdeği yağı, At kestanesi yağı ve kuşburnu çekirdeği yağı göz çevresinin aydınlatılmasına yardımcı olur. İçerdiği yüksek miktar E vitamini ve Itır yağı göz çevresinde antioksidan etki gösterir.",
+                href:"#"
 
+            },
+            {
+                id:1,
+                imagePath:"img/argan.png",
+                urunAdi:"Kuşburnu Çekirdeği Yağı",
+                aciklama:"From Natura Kuşburnu Çekirdeği Yağı sadece soğuk pres saf kuşburnu çekirdeği yağını içerir. Pro vitamin A, Omega-3, Omega-6, E ve C vitaminleri açısından zengindir.",
+                href:"#"
+            },
+            {
+                id:2,
+                imagePath:"img/jojoba.png",
+                urunAdi:"Jojoba Yağı",
+                aciklama:"Organik sertifikalı jojoba yağı, % 100 saf, soğuk sıkım jojoba çekirdeklerinden elde edilmiştir. Jojoba yağı, cilt sebuma benzeyen yapısı sayesinde yüksek emilim gösterir. ",
+                href:"#"
+
+            },
+            {
+
+                id:3,
+                imagePath:"img/argan.png",
+                urunAdi:"Argan Yağı",
+                aciklama:"From Natura Argan Yağı soğuk sıkım yöntemi ile elde edilmiştir. Oleik asitvelinoleik asit açısından oldukça zengin cilt ve saç bakım yağıdır. Cildi ve saçı besler venemlendirir",
+                href:"#"
+
+            },
+            {
+                id:4,
+                imagePath:"img/aspir.png",
+                urunAdi:"Aspir Yağı",
+                aciklama:"From Natura Aspir Yağı, Aspir bitkisinin yapraklarından elde edilen birbitkisel yağdır. Yaprakları, içeriğinde zengin salisilik asit barındırır. Aspir yağı da buyaprakların damıtılmasıyla elde edilir. Cildin daha parlak ve canlı görünmesini hedeflerkeniçeriğindeki E vitamini ve antioksidan özelliği cildin genç bir görünüm kazanmasına yardımcı olur.",
+                href:"#"
+
+            },
+            {
+                id:5,
+                imagePath:"img/kayisi.png",
+                urunAdi:"Kayısı Çekirdeği Yağı",
+                aciklama:"From Natura Kayısı Çekirdeği Yağı, kayısı çekirdeklerinin soğuk presyöntemiyle işlenmesiyle elde edilen saf ve doğal bir bitkisel yağdır. Bu yöntem, yağın besindeğerlerinin korunmasını ve en yüksek kalitede üretilmesini sağlamaya yardımcı olur. Buyağın birçok sağlık faydası bulunmaktadır. Antioksidan özellikleri sayesinde yaşlanmayı geciktirmeye yardımcı olurken nemlendirici özellikleri sayesinde de cildi besleyerek yumuşatmayı hedefler.",
+                href:"#"
+
+            }
+            
+        ];
     </script>
 
-</body>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
 </html>
