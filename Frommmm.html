@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Caprasimo&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Rubik:wght@300;500;600&family=Titillium+Web:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Caprasimo&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Titillium+Web:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .fn-container {
+            width: 100%;
+            height: 100%;
+            padding: 50px;
+        }
+
+        .item {
+            width: 180px;
+            height: 200px;
+            display: inline-block;
+            transition: 0.5s;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px #797979;
+            left: 55%;
+            display: flex;
+            align-items: center;
+            background-color: #d6d0c8;
+        }
+
+        .item:nth-child(1),
+        .item:nth-child(2) {
+            left: 0;
+            top: 0;
+            transform: translate(0, 0);
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: none;
+            padding: 10px 50px;
+        }
+
+        .item:nth-child(1) .ilk-img {
+            display: none;
+        }
+
+        .item:nth-child(2) .ilk-img {
+            display: none;
+        }
+
+        .item:nth-child(3) .ilk-img {
+            width: 150px;
+        }
+
+        .item:nth-child(4) .ilk-img {
+            width: 150px;
+        }
+
+        .item:nth-child(5) .ilk-img {
+            width: 150px;
+        }
+
+
+
+        .item:nth-child(4) {
+            left: calc(55% + 210px);
+        }
+
+        .item:nth-child(5) {
+            left: calc(60% + 320px);
+        }
+
+        .item:nth-child(n+6) {
+            left: calc(60% + 480px);
+            opacity: 0;
+        }
+
+        .item .content {
+            text-align: center;
+            padding: 0;
+            display: none;
+            font-family: system-ui;
+        }
+
+        .item:nth-child(2) .content {
+            display: block;
+            z-index: 11111;
+        }
+
+        .item .baslik {
+            color: red;
+            font-size: 26px;
+            font-weight: bold;
+            opacity: 0;
+            animation: showcontent 1s ease-in-out 1 forwards
+        }
+
+        .item .aciklama {
+            color: black;
+            margin: 20px 0;
+            opacity: 0;
+            font-size: 16px;
+            animation: showcontent .5s ease-in-out 0.3s 1 forwards
+        }
+
+        @keyframes showcontent {
+            from {
+                opacity: 0;
+                transform: translate(0, 100px);
+                filter: blur(33px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0, 0);
+                filter: blur(0);
+            }
+        }
+
+        .btnYon {
+            position: absolute;
+            bottom: 30px;
+            z-index: 222222;
+            text-align: center;
+            width: 100%;
+        }
+
+        .btnYon button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #555;
+            transition: 0.5s;
+        }
+
+        .btnYon button:hover {
+            background-color: #bac383;
+        }
+
+        .link {
+            background-color: white;
+            border: 2px solid #556B2F;
+            border-radius: 5px;
+            padding: 10px 20px;
+            opacity: 0;
+            animation: showcontent .5s ease-in-out 0.6s 1 forwards
+        }
+
+        .link:hover {
+            background-color: #556B2F;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="fn-container ">
+
+        <div id="slide">
+
+            <div class="item row item-clickable" data-index="1">
+                <div class="col-6 ">
+                    <img class="ilk-img" src="img/gece-gorsel.png" alt="">
+                    <div class="content">
+                        <img src="img/gece-gorsel.png" alt="">
+                        <div class="baslik" style="color: #354f97;">Yaşlanma Karşıtı Retinol Gece Serumu</div>
+                        <div class="aciklama">From Natura Gece Serumu, Anti-age aktifi retinol (%0,5) ve aydınlatıcı,
+                            yenileyici, çabuk emilen, yüksek E vitamini, omega 6 içeren, yağ asitlerince zengin değerli
+                            yağlardan oluşmaktadır.</div>
+                        <a href="https://fromnatura.com/urun/yaslanma-karsiti-retinol-gece-serumu/">
+                            <button class="link">Ürünü İncele</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6"></div>
+
+                <div style="position: absolute;">
+                    slider
+                </div>
+            </div>
+
+        </div>
+
+        <div class="btnYon">
+            <button id="once"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="sonra"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = document.querySelectorAll(".item");
+    
+            items.forEach((item) => {
+                item.addEventListener("click", () => {
+                    // Hide all ".item:nth-child(2)" elements
+                    const itemContent = document.querySelectorAll(".item:nth-child(2)");
+                    itemContent.forEach((content) => {
+                        content.style.display = "block";
+                    });
+    
+                    // Show the corresponding ".item:nth-child(2)" element
+                    const contentToDisplay = item.querySelector(".item:nth-child(2)");
+                    if (contentToDisplay) {
+                        contentToDisplay.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
