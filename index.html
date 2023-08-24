@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,37 +17,40 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>deneme</title>
     <style>
-        .item{
+        .item {
             padding: 50px 70px;
         }
-        .urun-img{
+
+        .urun-img {
             display: block;
             margin: auto;
         }
-        .urun-adi{
+
+        .urun-adi {
             text-align: center;
             font-size: 40px;
         }
-        .aciklama{
+
+        .aciklama {
             text-align: center;
             font-size: 20px;
         }
-        
-        .slide{
+
+        .slide {
             width: 250px;
             height: 300px;
             border: 1px solid black;
-            border-radius:5px ;
-            display: inline-block;   
+            border-radius: 5px;
+            display: inline-block;
         }
-        .slider{
-            overflow: scroll ;
-        }
-        
-.deneme {
-    background-attachment: fixed;
-}
 
+        .slider {
+            overflow: scroll;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+        }
     </style>
 </head>
 
@@ -65,19 +69,15 @@
                 </a>
             </div>
         </div>
-        
+
         <div class="col-6">
             <div class="slider">
                 <div class="slide">
                     <img src="img/argan.png" alt="" style="width: 250px;">
                 </div>
 
-                <div class="slide">            
-                    <img src="img/argan.png" alt="" style="width: 250px;">
-                </div>
-
                 <div class="slide">
-                    <img src="img/argan.png" alt="" style="width: 250px;">                   
+                    <img src="img/argan.png" alt="" style="width: 250px;">
                 </div>
 
                 <div class="slide">
@@ -96,76 +96,81 @@
                     <img src="img/argan.png" alt="" style="width: 250px;">
                 </div>
 
-    
+                <div class="slide">
+                    <img src="img/argan.png" alt="" style="width: 250px;">
+                </div>
+
+
             </div>
         </div>
     </div>
 
 
     <script>
-        var urunler=[
+        var urunler = [
             {
-                id:0,
-                imagePath:"img/yenileyici-aydinlatici.png",
-                urunAdi:"Yenileyici ve Aydınlatıcı Göz Çevresi Serumu",
-                aciklama:"From Natura Göz Çevresi Serumu, jojoba çekirdeği, üzüm çekirdeği, kayısı çekirdeği, nar çekirdeği ve hodan tohumu yağı ile cildi besler. Göz çevresinde kırışıklık karşıtı bakım sağlar. Kahve çekirdeği yağı, At kestanesi yağı ve kuşburnu çekirdeği yağı göz çevresinin aydınlatılmasına yardımcı olur. İçerdiği yüksek miktar E vitamini ve Itır yağı göz çevresinde antioksidan etki gösterir.",
-                href:"#"
+                id: 0,
+                imagePath: "img/yenileyici-aydinlatici.png",
+                urunAdi: "Yenileyici ve Aydınlatıcı Göz Çevresi Serumu",
+                aciklama: "From Natura Göz Çevresi Serumu, jojoba çekirdeği, üzüm çekirdeği, kayısı çekirdeği, nar çekirdeği ve hodan tohumu yağı ile cildi besler. Göz çevresinde kırışıklık karşıtı bakım sağlar. Kahve çekirdeği yağı, At kestanesi yağı ve kuşburnu çekirdeği yağı göz çevresinin aydınlatılmasına yardımcı olur. İçerdiği yüksek miktar E vitamini ve Itır yağı göz çevresinde antioksidan etki gösterir.",
+                href: "#"
 
             },
             {
-                id:1,
-                imagePath:"img/argan.png",
-                urunAdi:"Kuşburnu Çekirdeği Yağı",
-                aciklama:"From Natura Kuşburnu Çekirdeği Yağı sadece soğuk pres saf kuşburnu çekirdeği yağını içerir. Pro vitamin A, Omega-3, Omega-6, E ve C vitaminleri açısından zengindir.",
-                href:"#"
+                id: 1,
+                imagePath: "img/argan.png",
+                urunAdi: "Kuşburnu Çekirdeği Yağı",
+                aciklama: "From Natura Kuşburnu Çekirdeği Yağı sadece soğuk pres saf kuşburnu çekirdeği yağını içerir. Pro vitamin A, Omega-3, Omega-6, E ve C vitaminleri açısından zengindir.",
+                href: "#"
             },
             {
-                id:2,
-                imagePath:"img/jojoba.png",
-                urunAdi:"Jojoba Yağı",
-                aciklama:"Organik sertifikalı jojoba yağı, % 100 saf, soğuk sıkım jojoba çekirdeklerinden elde edilmiştir. Jojoba yağı, cilt sebuma benzeyen yapısı sayesinde yüksek emilim gösterir. ",
-                href:"#"
+                id: 2,
+                imagePath: "img/jojoba.png",
+                urunAdi: "Jojoba Yağı",
+                aciklama: "Organik sertifikalı jojoba yağı, % 100 saf, soğuk sıkım jojoba çekirdeklerinden elde edilmiştir. Jojoba yağı, cilt sebuma benzeyen yapısı sayesinde yüksek emilim gösterir. ",
+                href: "#"
 
             },
             {
 
-                id:3,
-                imagePath:"img/argan.png",
-                urunAdi:"Argan Yağı",
-                aciklama:"From Natura Argan Yağı soğuk sıkım yöntemi ile elde edilmiştir. Oleik asitvelinoleik asit açısından oldukça zengin cilt ve saç bakım yağıdır. Cildi ve saçı besler venemlendirir",
-                href:"#"
+                id: 3,
+                imagePath: "img/argan.png",
+                urunAdi: "Argan Yağı",
+                aciklama: "From Natura Argan Yağı soğuk sıkım yöntemi ile elde edilmiştir. Oleik asitvelinoleik asit açısından oldukça zengin cilt ve saç bakım yağıdır. Cildi ve saçı besler venemlendirir",
+                href: "#"
 
             },
             {
-                id:4,
-                imagePath:"img/aspir.png",
-                urunAdi:"Aspir Yağı",
-                aciklama:"From Natura Aspir Yağı, Aspir bitkisinin yapraklarından elde edilen birbitkisel yağdır. Yaprakları, içeriğinde zengin salisilik asit barındırır. Aspir yağı da buyaprakların damıtılmasıyla elde edilir. Cildin daha parlak ve canlı görünmesini hedeflerkeniçeriğindeki E vitamini ve antioksidan özelliği cildin genç bir görünüm kazanmasına yardımcı olur.",
-                href:"#"
+                id: 4,
+                imagePath: "img/aspir.png",
+                urunAdi: "Aspir Yağı",
+                aciklama: "From Natura Aspir Yağı, Aspir bitkisinin yapraklarından elde edilen birbitkisel yağdır. Yaprakları, içeriğinde zengin salisilik asit barındırır. Aspir yağı da buyaprakların damıtılmasıyla elde edilir. Cildin daha parlak ve canlı görünmesini hedeflerkeniçeriğindeki E vitamini ve antioksidan özelliği cildin genç bir görünüm kazanmasına yardımcı olur.",
+                href: "#"
 
             },
             {
-                id:5,
-                imagePath:"img/kayisi.png",
-                urunAdi:"Kayısı Çekirdeği Yağı",
-                aciklama:"From Natura Kayısı Çekirdeği Yağı, kayısı çekirdeklerinin soğuk presyöntemiyle işlenmesiyle elde edilen saf ve doğal bir bitkisel yağdır. Bu yöntem, yağın besindeğerlerinin korunmasını ve en yüksek kalitede üretilmesini sağlamaya yardımcı olur. Buyağın birçok sağlık faydası bulunmaktadır. Antioksidan özellikleri sayesinde yaşlanmayı geciktirmeye yardımcı olurken nemlendirici özellikleri sayesinde de cildi besleyerek yumuşatmayı hedefler.",
-                href:"#"
+                id: 5,
+                imagePath: "img/kayisi.png",
+                urunAdi: "Kayısı Çekirdeği Yağı",
+                aciklama: "From Natura Kayısı Çekirdeği Yağı, kayısı çekirdeklerinin soğuk presyöntemiyle işlenmesiyle elde edilen saf ve doğal bir bitkisel yağdır. Bu yöntem, yağın besindeğerlerinin korunmasını ve en yüksek kalitede üretilmesini sağlamaya yardımcı olur. Buyağın birçok sağlık faydası bulunmaktadır. Antioksidan özellikleri sayesinde yaşlanmayı geciktirmeye yardımcı olurken nemlendirici özellikleri sayesinde de cildi besleyerek yumuşatmayı hedefler.",
+                href: "#"
 
             }
-            
+
         ];
     </script>
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
