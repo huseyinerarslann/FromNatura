@@ -41,15 +41,24 @@
             height: 300px;
             border: 1px solid black;
             border-radius: 5px;
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .slider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
             overflow: scroll;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             gap: 10px;
+        }
+
+        .slider img {
+            width: 250px;
         }
     </style>
 </head>
@@ -71,36 +80,38 @@
         </div>
 
         <div class="col-6">
-            <div class="slider">
-                <div class="slide">
-                    <img src="img/argan.png" alt="" style="width: 250px;">
+            <div style="position: relative;height: 100%;">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="img/argan.png">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/argan.png">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/argan.png">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/argan.png">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/argan.png">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/argan.png">
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/argan.png">
+                    </div>
+
+
                 </div>
-
-                <div class="slide">
-                    <img src="img/argan.png" alt="" style="width: 250px;">
-                </div>
-
-                <div class="slide">
-                    <img src="img/argan.png" alt="" style="width: 250px;">
-                </div>
-
-                <div class="slide">
-                    <img src="img/argan.png" alt="" style="width: 250px;">
-                </div>
-
-                <div class="slide">
-                    <img src="img/argan.png" alt="" style="width: 250px;">
-                </div>
-
-                <div class="slide">
-                    <img src="img/argan.png" alt="" style="width: 250px;">
-                </div>
-
-                <div class="slide">
-                    <img src="img/argan.png" alt="" style="width: 250px;">
-                </div>
-
-
             </div>
         </div>
     </div>
