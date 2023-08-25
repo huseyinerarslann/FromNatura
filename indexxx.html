@@ -65,13 +65,11 @@
     <div class="row">
         <div class="col-6">
             <div class="item">
-                <img class="urun-img" src="img/gece-gorsel.png" alt="">
-                <h2 class="urunAdi">Yaşlanma Karşıtı Retinol Gece Serumu</h2>
-                <p class="aciklama">From Natura Gece Serumu, Anti-age aktifi retinol (%0,5) ve aydınlatıcı,
-                    yenileyici, çabuk emilen, yüksek E vitamini, omega 6 içeren, yağ asitlerince zengin değerli
-                    yağlardan oluşmaktadır.</p>
+                <img class="urun-img" src="" alt="">
+                <h2 class="urunAdi"></h2>
+                <p class="aciklama"></p>
                 <a class="btn-link" href="#">
-                    <button>Ürünü İncele</button>                   
+                    <button></button>                   
                 </a>
             </div>
         </div>
@@ -163,11 +161,80 @@
                 aciklama: "From Natura Kayısı Çekirdeği Yağı, kayısı çekirdeklerinin soğuk presyöntemiyle işlenmesiyle elde edilen saf ve doğal bir bitkisel yağdır. Bu yöntem, yağın besindeğerlerinin korunmasını ve en yüksek kalitede üretilmesini sağlamaya yardımcı olur. Buyağın birçok sağlık faydası bulunmaktadır. Antioksidan özellikleri sayesinde yaşlanmayı geciktirmeye yardımcı olurken nemlendirici özellikleri sayesinde de cildi besleyerek yumuşatmayı hedefler.",
                 href: "#"
 
+            },
+            {
+                id: 6,
+                imagePath: "img/gece-gorsel.png",
+                urunAdi: "Yaşlanma Karşıtı Retinol Gece Serumu",
+                aciklama: "From Natura Gece Serumu, Anti-age aktifi retinol (%0,5) ve aydınlatıcı, yenileyici, çabuk emilen, yüksek E vitamini, omega 6 içeren, yağ asitlerince zengin değerli yağlardan oluşmaktadır.",
+                href: "#"
+
             }
 
         ];
     </script>
+
+    <!-- <script>
+        let productName=document.getElementsByClassName("");
+        let description=document.getElementsByClassName("");
+        let Img=document.getElementsByClassName("");
+        let link=document.getElementsByClassName("");
+
+       
+    </script> -->
+
+
+
+
+
+<script>
+
+
+
+//item class'ına ulaştık
+const urunlerAlani = document.querySelector(".item");
+
+
+for (let i = 0; i < urunler.length; i++) {
+ 
     
+    const urunDiv = document.createElement("div");
+    urunDiv.classList.add("urun");
+
+    const urunImg = document.createElement("img");
+    urunImg.src = urunler[i].imagePath;
+    urunDiv.appendChild(urunImg);
+    urunImg.style.display="block";
+    urunImg.style.margin="auto";
+
+   
+    const urunAdi = document.createElement("h2");
+    urunAdi.textContent = urunler[i].urunAdi;
+    urunDiv.appendChild(urunAdi);
+    urunAdi.style.textAlign="center";
+
+   
+    const aciklama = document.createElement("p");
+    aciklama.textContent = urunler[i].aciklama;
+    urunDiv.appendChild(aciklama);
+    aciklama.style.textAlign="center";
+
+    
+    const incelemeLink = document.createElement("a");
+    incelemeLink.href = urunler[i].href;
+    const incelemeButton = document.createElement("button");
+    incelemeButton.textContent = "Ürünü İncele";
+    incelemeLink.appendChild(incelemeButton);
+    urunDiv.appendChild(incelemeLink);
+    
+
+    
+    urunlerAlani.appendChild(urunDiv);
+}
+</script> 
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
