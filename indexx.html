@@ -29,9 +29,10 @@
 
   <title>deneme</title>
   <style>
-    body{
-        background-color: #f4f0e9;
+    body {
+      background-color: #f4f0e9;
     }
+
     .item {
       padding: 50px 70px;
     }
@@ -51,45 +52,38 @@
       font-size: 20px;
     }
 
-
     .gtco-testimonials {
       position: relative;
       margin-top: 30px;
-
     }
 
-      .owl-item .urun{
-        padding: 10px;
-      }
+    .owl-item .urun {
+      padding: 10px;
+    }
 
-      .owl-item .urun img{
-        padding: 10px;
-        background-color: #fff;
-        border-radius: 10px;
-      }
-      
-      .item .urun h2{
-        text-align: center;
-        font-size: 50px;
-      }
+    .owl-item .urun img {
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
 
-      .item .urun p{
-        text-align: center;
-        font-size: 24px;
-        padding: 20px ;
-      }
+    .item .urun h2 {
+      text-align: center;
+      font-size: 50px;
+    }
 
-      .item .urun button{
-        font-size: 26px;
-        border: 3px solid green;
-        padding: 10px 20px;
-        border-radius: 5px; 
-      }
+    .item .urun p {
+      text-align: center;
+      font-size: 24px;
+      padding: 20px;
+    }
 
-    
-  
-
-    
+    .item .urun button {
+      font-size: 26px;
+      border: 3px solid green;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
   </style>
 </head>
 
@@ -97,39 +91,24 @@
 
   <div class="row">
     <div class="col-6">
-      <div class="item">
-        
-      </div>
+      <div class="item"></div>
     </div>
-
     <div class="col-6">
       <div style="position: relative;height: 100%;">
-     
-
         <div class="gtco-testimonials">
+          <div class="owl-carousel owl-carousel1 owl-theme">
+          </div>
+          <button id="once">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
 
-            
-           
-            <div class="owl-carousel owl-carousel1 owl-theme"> 
-            </div>
-            <button id="once">
-                <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            
-            <button id="sonra">
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-            
+          <button id="sonra">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </div>
-
       </div>
-
-
     </div>
   </div>
-
-
-
 
   <script>
     var urunler = [
@@ -216,7 +195,7 @@
       const urunAdi = document.createElement("h2");
       urunAdi.textContent = urunler[i].urunAdi;
       urunDiv.appendChild(urunAdi);
-     
+
 
 
       const aciklama = document.createElement("p");
@@ -231,7 +210,7 @@
       incelemeButton.textContent = "Ürünü İncele";
       incelemeLink.appendChild(incelemeButton);
       urunDiv.appendChild(incelemeLink);
-      
+
       urunlerAlani.appendChild(urunDiv);
     }
   </script>
@@ -240,19 +219,19 @@
   <script>
     // slider foto çekme
     const urunlerAlan = document.querySelector(".owl-carousel");
-    
-    
+
+
     for (let i = 0; i < urunler.length; i++) {
 
 
-            const urunDiv = document.createElement("div");
-            urunDiv.classList.add("urun");
+      const urunDiv = document.createElement("div");
+      urunDiv.classList.add("urun");
 
-            const urunImg = document.createElement("img");
-            urunImg.src = urunler[i].imagePath;
-            urunDiv.appendChild(urunImg);
-            
-            urunlerAlan.appendChild(urunDiv);
+      const urunImg = document.createElement("img");
+      urunImg.src = urunler[i].imagePath;
+      urunDiv.appendChild(urunImg);
+
+      urunlerAlan.appendChild(urunDiv);
     }
 
   </script>
