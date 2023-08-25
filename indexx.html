@@ -1,291 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Caprasimo&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Rubik:wght@300;500;600&family=Titillium+Web:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Caprasimo&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Titillium+Web:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Caprasimo&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Rubik:wght@300;500;600&family=Titillium+Web:ital@0;1&display=swap"
-    rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Caprasimo&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Titillium+Web:ital@0;1&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-    crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>deneme</title>
+    <style>
+      body {
+        background-color: #f4f0e9;
+      }
 
-  <title>deneme</title>
-  <style>
-    body {
-      background-color: #f4f0e9;
-    }
+      .item {
+        padding: 50px 70px;
+      }
 
-    .item {
-      padding: 50px 70px;
-    }
+      .urun-img {
+        display: block;
+        margin: auto;
+      }
 
-    .urun-img {
-      display: block;
-      margin: auto;
-    }
+      .urun-adi {
+        text-align: center;
+        font-size: 40px;
+      }
 
-    .urun-adi {
-      text-align: center;
-      font-size: 40px;
-    }
+      .aciklama {
+        text-align: center;
+        font-size: 20px;
+      }
 
-    .aciklama {
-      text-align: center;
-      font-size: 20px;
-    }
+      .gtco-testimonials {
+        position: relative;
+        margin-top: 30px;
+      }
 
-    .gtco-testimonials {
-      position: relative;
-      margin-top: 30px;
-    }
+      .owl-item .urun {
+        padding: 10px;
+      }
 
-    .owl-item .urun {
-      padding: 10px;
-    }
+      .owl-item .urun img {
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
 
-    .owl-item .urun img {
-      padding: 10px;
-      background-color: #fff;
-      border-radius: 10px;
-    }
+      .item .urun h2 {
+        text-align: center;
+        font-size: 50px;
+      }
 
-    .item .urun h2 {
-      text-align: center;
-      font-size: 50px;
-    }
+      .item .urun p {
+        text-align: center;
+        font-size: 24px;
+        padding: 20px;
+      }
 
-    .item .urun p {
-      text-align: center;
-      font-size: 24px;
-      padding: 20px;
-    }
+      .item .urun button {
+        font-size: 26px;
+        border: 3px solid green;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
 
-    .item .urun button {
-      font-size: 26px;
-      border: 3px solid green;
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
-  </style>
-</head>
+      .aktif {
+        display: block;
+      }
 
-<body>
+      .item .urun {
+        display: block;
+      }
+    </style>
+  </head>
 
-  <div class="row">
-    <div class="col-6">
-      <div class="item"></div>
-    </div>
-    <div class="col-6">
-      <div style="position: relative;height: 100%;">
-        <div class="gtco-testimonials">
-          <div class="owl-carousel owl-carousel1 owl-theme">
+  <body>
+    <div class="row">
+      <div class="col-6">
+        <div class="urun" id="urun"></div>
+      </div>
+      <div class="col-6">
+        <div style="position: relative; height: 100%">
+          <div class="gtco-testimonials">
+            <div
+              class="owl-carousel owl-carousel1 owl-theme"
+              id="karusel"
+            ></div>
           </div>
-          <button id="once">
-            <i class="fa-solid fa-arrow-left"></i>
-          </button>
-
-          <button id="sonra">
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
         </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    var urunler = [
-      {
-        id: 0,
-        imagePath: "img/yenileyici-aydinlatici.png",
-        urunAdi: "Yenileyici ve Aydınlatıcı Göz Çevresi Serumu",
-        aciklama: "From Natura Göz Çevresi Serumu, jojoba çekirdeği, üzüm çekirdeği, kayısı çekirdeği, nar çekirdeği ve hodan tohumu yağı ile cildi besler. Göz çevresinde kırışıklık karşıtı bakım sağlar. Kahve çekirdeği yağı, At kestanesi yağı ve kuşburnu çekirdeği yağı göz çevresinin aydınlatılmasına yardımcı olur. İçerdiği yüksek miktar E vitamini ve Itır yağı göz çevresinde antioksidan etki gösterir.",
-        href: "#"
+    <script>
+      var urunler = [
+        {
+          id: 0,
+          imagePath: "img/yenileyici-aydinlatici.png",
+          urunAdi: "Yenileyici ve Aydınlatıcı Göz Çevresi Serumu",
+          aciklama:
+            "From Natura Göz Çevresi Serumu, jojoba çekirdeği, üzüm çekirdeği, kayısı çekirdeği, nar çekirdeği ve hodan tohumu yağı ile cildi besler. Göz çevresinde kırışıklık karşıtı bakım sağlar. Kahve çekirdeği yağı, At kestanesi yağı ve kuşburnu çekirdeği yağı göz çevresinin aydınlatılmasına yardımcı olur. İçerdiği yüksek miktar E vitamini ve Itır yağı göz çevresinde antioksidan etki gösterir.",
+          href: "#",
+        },
+        {
+          id: 1,
+          imagePath: "img/argan.png",
+          urunAdi: "Kuşburnu Çekirdeği Yağı",
+          aciklama:
+            "From Natura Kuşburnu Çekirdeği Yağı sadece soğuk pres saf kuşburnu çekirdeği yağını içerir. Pro vitamin A, Omega-3, Omega-6, E ve C vitaminleri açısından zengindir.",
+          href: "#",
+        },
+        {
+          id: 2,
+          imagePath: "img/jojoba.png",
+          urunAdi: "Jojoba Yağı",
+          aciklama:
+            "Organik sertifikalı jojoba yağı, % 100 saf, soğuk sıkım jojoba çekirdeklerinden elde edilmiştir. Jojoba yağı, cilt sebuma benzeyen yapısı sayesinde yüksek emilim gösterir. ",
+          href: "#",
+        },
+        {
+          id: 3,
+          imagePath: "img/argan.png",
+          urunAdi: "Argan Yağı",
+          aciklama:
+            "From Natura Argan Yağı soğuk sıkım yöntemi ile elde edilmiştir. Oleik asitvelinoleik asit açısından oldukça zengin cilt ve saç bakım yağıdır. Cildi ve saçı besler venemlendirir",
+          href: "#",
+        },
+        {
+          id: 4,
+          imagePath: "img/aspir.png",
+          urunAdi: "Aspir Yağı",
+          aciklama:
+            "From Natura Aspir Yağı, Aspir bitkisinin yapraklarından elde edilen birbitkisel yağdır. Yaprakları, içeriğinde zengin salisilik asit barındırır. Aspir yağı da buyaprakların damıtılmasıyla elde edilir. Cildin daha parlak ve canlı görünmesini hedeflerkeniçeriğindeki E vitamini ve antioksidan özelliği cildin genç bir görünüm kazanmasına yardımcı olur.",
+          href: "#",
+        },
+        {
+          id: 5,
+          imagePath: "img/kayisi.png",
+          urunAdi: "Kayısı Çekirdeği Yağı",
+          aciklama:
+            "From Natura Kayısı Çekirdeği Yağı, kayısı çekirdeklerinin soğuk presyöntemiyle işlenmesiyle elde edilen saf ve doğal bir bitkisel yağdır. Bu yöntem, yağın besindeğerlerinin korunmasını ve en yüksek kalitede üretilmesini sağlamaya yardımcı olur. Buyağın birçok sağlık faydası bulunmaktadır. Antioksidan özellikleri sayesinde yaşlanmayı geciktirmeye yardımcı olurken nemlendirici özellikleri sayesinde de cildi besleyerek yumuşatmayı hedefler.",
+          href: "#",
+        },
+        {
+          id: 6,
+          imagePath: "img/gece-gorsel.png",
+          urunAdi: "Yaşlanma Karşıtı Retinol Gece Serumu",
+          aciklama:
+            "From Natura Gece Serumu, Anti-age aktifi retinol (%0,5) ve aydınlatıcı, yenileyici, çabuk emilen, yüksek E vitamini, omega 6 içeren, yağ asitlerince zengin değerli yağlardan oluşmaktadır.",
+          href: "#",
+        },
+      ];
+    </script>
 
-      },
-      {
-        id: 1,
-        imagePath: "img/argan.png",
-        urunAdi: "Kuşburnu Çekirdeği Yağı",
-        aciklama: "From Natura Kuşburnu Çekirdeği Yağı sadece soğuk pres saf kuşburnu çekirdeği yağını içerir. Pro vitamin A, Omega-3, Omega-6, E ve C vitaminleri açısından zengindir.",
-        href: "#"
-      },
-      {
-        id: 2,
-        imagePath: "img/jojoba.png",
-        urunAdi: "Jojoba Yağı",
-        aciklama: "Organik sertifikalı jojoba yağı, % 100 saf, soğuk sıkım jojoba çekirdeklerinden elde edilmiştir. Jojoba yağı, cilt sebuma benzeyen yapısı sayesinde yüksek emilim gösterir. ",
-        href: "#"
-
-      },
-      {
-
-        id: 3,
-        imagePath: "img/argan.png",
-        urunAdi: "Argan Yağı",
-        aciklama: "From Natura Argan Yağı soğuk sıkım yöntemi ile elde edilmiştir. Oleik asitvelinoleik asit açısından oldukça zengin cilt ve saç bakım yağıdır. Cildi ve saçı besler venemlendirir",
-        href: "#"
-
-      },
-      {
-        id: 4,
-        imagePath: "img/aspir.png",
-        urunAdi: "Aspir Yağı",
-        aciklama: "From Natura Aspir Yağı, Aspir bitkisinin yapraklarından elde edilen birbitkisel yağdır. Yaprakları, içeriğinde zengin salisilik asit barındırır. Aspir yağı da buyaprakların damıtılmasıyla elde edilir. Cildin daha parlak ve canlı görünmesini hedeflerkeniçeriğindeki E vitamini ve antioksidan özelliği cildin genç bir görünüm kazanmasına yardımcı olur.",
-        href: "#"
-
-      },
-      {
-        id: 5,
-        imagePath: "img/kayisi.png",
-        urunAdi: "Kayısı Çekirdeği Yağı",
-        aciklama: "From Natura Kayısı Çekirdeği Yağı, kayısı çekirdeklerinin soğuk presyöntemiyle işlenmesiyle elde edilen saf ve doğal bir bitkisel yağdır. Bu yöntem, yağın besindeğerlerinin korunmasını ve en yüksek kalitede üretilmesini sağlamaya yardımcı olur. Buyağın birçok sağlık faydası bulunmaktadır. Antioksidan özellikleri sayesinde yaşlanmayı geciktirmeye yardımcı olurken nemlendirici özellikleri sayesinde de cildi besleyerek yumuşatmayı hedefler.",
-        href: "#"
-
-      },
-      {
-        id: 6,
-        imagePath: "img/gece-gorsel.png",
-        urunAdi: "Yaşlanma Karşıtı Retinol Gece Serumu",
-        aciklama: "From Natura Gece Serumu, Anti-age aktifi retinol (%0,5) ve aydınlatıcı, yenileyici, çabuk emilen, yüksek E vitamini, omega 6 içeren, yağ asitlerince zengin değerli yağlardan oluşmaktadır.",
-        href: "#"
-
+    <script>
+      //Obje Bileşenlerini İteme Çekme
+////////
+      //item class'ına ulaştık
+      function urunGoster(id) {
+        const urun = urunler.filter((w) => w.id == id)[0];
+        document.getElementById("urun").innerHTML = `<img src="${urun.imagePath}" style="display: block; margin: auto" /><h2>${urun.urunAdi}</h2><p>${urun.aciklama}</p><a href="${urun.href}"><button>Ürünü İncele</button></a>`;
       }
+      addEventListener("load", (event) => {
+        urunGoster(6);
+      });
 
-    ];
-  </script>
-
-  <script>
-    //Obje Bileşenlerini İteme Çekme
-
-    //item class'ına ulaştık
-    const urunlerAlani = document.querySelector(".item");
-
-
-    for (let i = 0; i < urunler.length; i++) {
-
-
-      const urunDiv = document.createElement("div");
-      urunDiv.classList.add("urun");
-
-      const urunImg = document.createElement("img");
-      urunImg.src = urunler[i].imagePath;
-      urunDiv.appendChild(urunImg);
-      urunImg.style.display = "block";
-      urunImg.style.margin = "auto";
-
-
-      const urunAdi = document.createElement("h2");
-      urunAdi.textContent = urunler[i].urunAdi;
-      urunDiv.appendChild(urunAdi);
-
-
-
-      const aciklama = document.createElement("p");
-      aciklama.textContent = urunler[i].aciklama;
-      urunDiv.appendChild(aciklama);
-
-
-
-      const incelemeLink = document.createElement("a");
-      incelemeLink.href = urunler[i].href;
-      const incelemeButton = document.createElement("button");
-      incelemeButton.textContent = "Ürünü İncele";
-      incelemeLink.appendChild(incelemeButton);
-      urunDiv.appendChild(incelemeLink);
-
-      urunlerAlani.appendChild(urunDiv);
-    }
-  </script>
-
-
-  <script>
-    // slider foto çekme
-    const urunlerAlan = document.querySelector(".owl-carousel");
-
-
-    for (let i = 0; i < urunler.length; i++) {
-
-
-      const urunDiv = document.createElement("div");
-      urunDiv.classList.add("urun");
-
-      const urunImg = document.createElement("img");
-      urunImg.src = urunler[i].imagePath;
-      urunDiv.appendChild(urunImg);
-
-      urunlerAlan.appendChild(urunDiv);
-    }
-
-  </script>
-
-
-  <script>
-    (function () {
-      "use strict";
-
-      var carousels = function () {
-        $(".owl-carousel1").owlCarousel({
-          loop: true,
-          center: true,
-          margin: 0,
-          responsiveClass: true,
-          nav: false,
-          responsive: {
-            0: {
-              items: 1,
-              nav: false
+      // slider foto çekme
+      const urunlerAlan = document.querySelector(".owl-carousel");
+      for (let i = 0; i < urunler.length; i++) {
+        var sablon = `<div class="urun"><a href="javascript:urunGoster(${urunler[i].id})"><img src="${urunler[i].imagePath}"></a></div>`;
+        document.getElementById("karusel").innerHTML += sablon;
+      }
+/////////
+      (function () {
+        "use strict";
+        var carousels = function () {
+          $(".owl-carousel1").owlCarousel({
+            loop: true,
+            center: true,
+            margin: 0,
+            responsiveClass: true,
+            nav: false,
+            responsive: {
+              0: {
+                items: 1,
+                nav: false,
+              },
+              680: {
+                items: 2,
+                nav: false,
+                loop: false,
+              },
+              1000: {
+                items: 3,
+                nav: false,
+              },
             },
-            680: {
-              items: 2,
-              nav: false,
-              loop: false
-            },
-            1000: {
-              items: 3,
-              nav: false
-            }
-          }
-        });
-      };
+          });
+        };
 
-      (function ($) {
-        carousels();
-      })(jQuery);
-    })();
+        (function ($) {
+          carousels();
+        })(jQuery);
+      })();
+    </script>
 
-  </script>
-
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
