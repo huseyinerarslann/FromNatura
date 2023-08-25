@@ -17,9 +17,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <script
-  src="https://code.jquery.com/jquery-3.7.0.js"
-  integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-  crossorigin="anonymous"></script>
+        src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+        crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>deneme</title>
     <style>
@@ -42,126 +46,97 @@
             font-size: 20px;
         }
 
-        .slide {
-            width: 250px;
-            height: 300px;
-            border: 1px solid black;
-            border-radius: 5px;
-        }
+       
 
-        .slider {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            display: grid;
-            grid-template-columns: auto auto auto;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 10px;
-        }
 
-        .slider img {
-            width: 250px;
-        }
+        
 
 
 
+      
 
-
-
-
-
-
-        /* Import Google font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-
-.wrapper {
-  max-width: 1100px;
-  width: 100%;
+.gtco-testimonials {
   position: relative;
-}
-.wrapper i {
-  top: 50%;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  font-size: 1.25rem;
-  position: absolute;
-  text-align: center;
-  line-height: 50px;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
-  transform: translateY(-50%);
-  transition: transform 0.1s linear;
-}
-.wrapper i:active{
-  transform: translateY(-50%) scale(0.85);
-}
-.wrapper i:first-child{
-  left: -22px;
-}
-.wrapper i:last-child{
-  right: -22px;
-}
-.wrapper .carousel{
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 12px);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 16px;
-  border-radius: 8px;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-.carousel.no-transition {
-  scroll-behavior: auto;
-}
-.carousel.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-}
-.carousel.dragging .card {
-  cursor: grab;
-  user-select: none;
-}
-.carousel :where(.card, .img) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.carousel .card {
-  scroll-snap-align: start;
-  height: 342px;
-  list-style: none;
-  background: #fff;
-  cursor: pointer;
-  padding-bottom: 15px;
-  flex-direction: column;
-  border-radius: 8px;
-}
+  margin-top: 30px;
 
-.img img{
-    width: 200px;
-    display: block;
-    margin: auto;
 }
+  
 
-@media screen and (max-width: 900px) {
-  .wrapper .carousel {
-    grid-auto-columns: calc((100% / 2) - 9px);
+  .owl-nav {
+    display: none;
+  }
+
+  .owl-dots {
+    text-align: center;
+  }
+
+  .card {
+    background: #fff;
+    box-shadow: 0 8px 30px -7px #c9dff0;
+    margin: 50px;
+    padding: 0 10px;
+    border-radius: 20px;
+    border: 0;
+
+    .card-img-top {
+      max-width: 100px;
+      border-radius: 50%;
+      margin: 15px auto 0;
+      box-shadow: 0 8px 20px -4px #95abbb;
+      width: 100px;
+      height: 100px;
+    }
+
+    h5 {
+      color: #01b0f8;
+      font-size: 21px;
+      line-height: 1.3;
+
+      span {
+        font-size: 18px;
+        color: #666666;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      padding-bottom: 15px;
+    }
+  }
+
+  .active {
+    opacity: 0.5;
+    transition: all 0.3s;
+  }
+
+  .center {
+    opacity: 1;
+
+    h5 {
+      font-size: 24px;
+
+    }
+
+    .card-img-top {
+      max-width: 100%;
+      height: 120px;
+      width: 120px;
+    }
+  }
+
+
+@media (max-width: 767px) {
+  .gtco-testimonials {
+    margin-top: 20px;
   }
 }
-@media screen and (max-width: 600px) {
-  .wrapper .carousel {
-    grid-auto-columns: 100%;
-  }
-}
+
+
+
+
+
+
     </style>
 </head>
 
@@ -213,44 +188,63 @@
 
                 </div> -->
 
-               
-               
-                <!-- Slider deneme -->
-                <div class="wrapper">
+                <div class="gtco-testimonials">
                     
+                    <div class="owl-carousel owl-carousel1 owl-theme">
+                      <div>
+                        <div class="card text-center" style="margin: 50px;">
+                            <img class="card-img-top" src="img/argan.png" alt="">  
+                            <h5>Argan Yağı</h5>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <div class="card text-center">
+                            <img class="card-img-top" src="img/aspir.png" alt="">  
+                            <h5>Aspir Yağı</h5>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="card text-center">
+                            <img class="card-img-top" src="img/gece-gorsel.png" alt="">  
+                            <h5>Gece </h5>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="card text-center">
+                            <img class="card-img-top" src="img/jojoba.png" alt="">  
+                            <h5>Jojoba Yağı</h5>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="card text-center">
+                            <img class="card-img-top" src="img/kayisi.png" alt="">  
+                            <h5>Kayısı Çekirdeği Yağı</h5>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="card text-center">
+                            <img class="card-img-top" src="img/yenileyici-aydinlatici.png" alt="">  
+                            <h5>Yenileyici Aydınlatıcı</h5>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="card text-center">
+                            <img class="card-img-top" src="img/aspir.png" alt="">  
+                            <h5>Kuşburnu Çekirdeği Yağı</h5>
+                        </div>
+                      </div>
+                      
                     
-                    <ul class="carousel">
-                      <li class="card">
-                        <div class="img"><img src="img/argan.png" alt="img" draggable="false"></div>
-                      </li>
-                      
-                      <li class="card">
-                        <div class="img"><img src="img/argan.png" alt="img" draggable="false"></div>                       
-                      </li>
-                      
-                      <li class="card">
-                        <div class="img"><img src="img/argan.png" alt="img" draggable="false"></div>
-                      </li>
-                      
-                      <li class="card">
-                        <div class="img"><img src="img/argan.png" alt="img" draggable="false"></div>
-                      </li>
-                      
-                      <li class="card">
-                        <div class="img"><img src="img/argan.png" alt="img" draggable="false"></div>
-                      </li>
-                      
-                      <li class="card">
-                        <div class="img"><img  src="img/argan.png" alt="img" draggable="false"></div>
-                      </li>
-                    </ul>
-                    
-                    
+                    </div>
                   </div>
 
-
-
-
+                
 
             </div> 
 
@@ -398,78 +392,43 @@
     </script>
 
 
+<script>
+    (function () {
+  "use strict";
 
-    <script>
-            //slider icin
-        const wrapper = document.querySelector(".wrapper");
-        const carousel = document.querySelector(".carousel");
-        const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-        const carouselChildrens = [...carousel.children];
+  var carousels = function () {
+    $(".owl-carousel1").owlCarousel({
+      loop: true,
+      center: true,
+      margin: 0,
+      responsiveClass: true,
+      nav: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        680: {
+          items: 2,
+          nav: false,
+          loop: false
+        },
+        1000: {
+          items: 3,
+          nav: true
+        }
+      }
+    });
+  };
 
-        let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
-        // Get the number of cards that can fit in the carousel at once
-        let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-        // Insert copies of the last few cards to beginning of carousel for infinite scrolling
-        carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
-            carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-        });
-        // Insert copies of the first few cards to end of carousel for infinite scrolling
-        carouselChildrens.slice(0, cardPerView).forEach(card => {
-            carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-        });
+  (function ($) {
+    carousels();
+  })(jQuery);
+})();
 
-        // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.offsetWidth;
-        carousel.classList.remove("no-transition");
-        // Add event listeners for the arrow buttons to scroll the carousel left and right
+</script>
 
-        const dragStart = (e) => {
-            isDragging = true;
-            carousel.classList.add("dragging");
-            // Records the initial cursor and scroll position of the carousel
-            startX = e.pageX;
-            startScrollLeft = carousel.scrollLeft;
-        }
-        const dragging = (e) => {
-            if(!isDragging) return; // if isDragging is false return from here
-            // Updates the scroll position of the carousel based on the cursor movement
-            carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-        }
-        const dragStop = () => {
-            isDragging = false;
-            carousel.classList.remove("dragging");
-        }
-        const infiniteScroll = () => {
-            // If the carousel is at the beginning, scroll to the end
-            if(carousel.scrollLeft === 0) {
-                carousel.classList.add("no-transition");
-                carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
-                carousel.classList.remove("no-transition");
-            }
-            // If the carousel is at the end, scroll to the beginning
-            else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
-                carousel.classList.add("no-transition");
-                carousel.scrollLeft = carousel.offsetWidth;
-                carousel.classList.remove("no-transition");
-            }
-            // Clear existing timeout & start autoplay if mouse is not hovering over carousel
-            clearTimeout(timeoutId);
-            if(!wrapper.matches(":hover")) autoPlay();
-        }
-        const autoPlay = () => {
-            if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
-            // Autoplay the carousel after every 2500 ms
-            timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
-        }
-        autoPlay();
-        carousel.addEventListener("mousedown", dragStart);
-        carousel.addEventListener("mousemove", dragging);
-        document.addEventListener("mouseup", dragStop);
-        carousel.addEventListener("scroll", infiniteScroll);
-        wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-        wrapper.addEventListener("mouseleave", autoPlay);
-    </script>
+    
 
 
 
