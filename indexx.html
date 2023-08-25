@@ -134,43 +134,16 @@
 
     <div class="col-6">
       <div style="position: relative;height: 100%;">
-        <!-- <div class="slider">
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-
-                </div> -->
+     
 
         <div class="gtco-testimonials">
 
 
            <div class="owl-carousel owl-carousel1 owl-theme">
-            <div class="out" >
+
+              
+
+            <!-- <div class="out" >
               <div class="card text-center" >
                 <img class="card-img-top" src="img/argan.png" alt="">
                 <h5>Argan Yağı</h5>
@@ -217,7 +190,7 @@
                 <img class="card-img-top" src="img/aspir.png" alt="">
                 <h5>Kuşburnu Çekirdeği Yağı</h5>
               </div>
-            </div> 
+            </div>  -->
 
 
           </div>
@@ -345,62 +318,25 @@
   </script>
 
 
-
-  <script>
-    //slider gorselleri icin obje
-    var sliderImg = [
-      {
-        imagePath: "img/yenileyici-aydinlatici.png",
-        urunAdi:"Yenileyici ve Aydınlatıcı Göz Çevresi Serumu"
-      },
-      {
-        imagePath: "img/argan.png",
-        urunAdi: "Kuşburnu Çekirdeği Yağı",
-      },
-      {
-        imagePath: "img/jojoba.png",
-        urunAdi: "Jojoba Yağı",
-      },
-      {
-        imagePath: "img/argan.png",
-        urunAdi: "Argan Yağı",
-      },
-      {
-        imagePath: "img/aspir.png",
-        urunAdi: "Aspir Yağı",
-      },
-      {
-        imagePath: "img/kayisi.png",
-        urunAdi: "Kayısı Çekirdeği Yağı",
-      },
-      {
-        imagePath: "img/gece-gorsel.png",
-        urunAdi: "Yaşlanma Karşıtı Retinol Gece Serumu",
-      }
-    ];
-  
-  </script>
-
   <script>
     // slider foto çekme
+    const urunlerAlan = document.querySelector(".owl-carousel");
     
-    const sliderAlan = document.querySelector(".out");
     
-    for(let i=0;i<sliderImg.length;i++){
-        
-        const urunDiv = document.createElement("div");
-        urunDiv.classList.add("urun");
+    for (let i = 0; i < urunler.length; i++) {
 
-        const urunImg = document.createElement("img");
-      urunImg.src =sliderImg[i].imagePath;
-      urunDiv.appendChild(urunImg);
-      
-      const urunAdi = document.createElement("h5");
-      urunAdi.textContent = sliderImg[i].urunAdi;
-      urunDiv.appendChild(urunAdi);
-     
-      urunlerAlani.appendChild(urunDiv);
+
+            const urunDiv = document.createElement("div");
+            urunDiv.classList.add("urun");
+
+            const urunImg = document.createElement("img");
+            urunImg.src = urunler[i].imagePath;
+            urunDiv.appendChild(urunImg);
+            urunImg.style.backgroundColor="white";
+            
+            urunlerAlan.appendChild(urunDiv);
     }
+
   </script>
 
 
