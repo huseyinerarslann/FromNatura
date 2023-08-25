@@ -29,6 +29,9 @@
 
   <title>deneme</title>
   <style>
+    body{
+        background-color: #f4f0e9;
+    }
     .item {
       padding: 50px 70px;
     }
@@ -64,38 +67,36 @@
       text-align: center;
     }
 
+    .out{
+        display: table;
+        padding: 15px;
+    }
     .card {
       background: #fff;
-      box-shadow: 0 8px 30px -7px #c9dff0;
-      margin: 20px;
-      padding: 0 10px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      margin: 15px;
       border-radius: 20px;
       border: 0;
-
+      width: 320px;
+      height: 320px;
+      display: table-cell;
+      vertical-align: middle;
+    }
       .card-img-top {
-        max-width: 100px;
+        max-width: 200px;
         margin: 15px auto 0;
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        
       }
 
-      h5 {
-        color: #01b0f8;
-        font-size: 21px;
-        line-height: 1.3;
-
-        span {
-          font-size: 18px;
-          color: #666666;
-        }
-      }
+      
 
       p {
         font-size: 18px;
         color: #555;
         padding-bottom: 15px;
       }
-    }
+    
 
     .center {
       opacity: 1;
@@ -118,6 +119,7 @@
         margin-top: 20px;
       }
     }
+    
   </style>
 </head>
 
@@ -126,12 +128,7 @@
   <div class="row">
     <div class="col-6">
       <div class="item">
-        <img class="urun-img" src="" alt="">
-        <h2 class="urunAdi"></h2>
-        <p class="aciklama"></p>
-        <a class="btn-link" href="#">
-          <button></button>
-        </a>
+        
       </div>
     </div>
 
@@ -171,55 +168,56 @@
 
         <div class="gtco-testimonials">
 
-          <div class="owl-carousel owl-carousel1 owl-theme">
-            <div>
-              <div class="card text-center" style="margin: 50px;">
+
+           <div class="owl-carousel owl-carousel1 owl-theme">
+            <div class="out" >
+              <div class="card text-center" >
                 <img class="card-img-top" src="img/argan.png" alt="">
                 <h5>Argan Yağı</h5>
               </div>
             </div>
 
-            <div>
+            <div class="out">
               <div class="card text-center">
                 <img class="card-img-top" src="img/aspir.png" alt="">
                 <h5>Aspir Yağı</h5>
               </div>
             </div>
 
-            <div>
+            <div class="out">
               <div class="card text-center">
                 <img class="card-img-top" src="img/gece-gorsel.png" alt="">
                 <h5>Gece </h5>
               </div>
             </div>
 
-            <div>
+            <div class="out">
               <div class="card text-center">
                 <img class="card-img-top" src="img/jojoba.png" alt="">
                 <h5>Jojoba Yağı</h5>
               </div>
             </div>
 
-            <div>
+            <div class="out">
               <div class="card text-center">
                 <img class="card-img-top" src="img/kayisi.png" alt="">
                 <h5>Kayısı Çekirdeği Yağı</h5>
               </div>
             </div>
 
-            <div>
+            <div class="out">
               <div class="card text-center">
                 <img class="card-img-top" src="img/yenileyici-aydinlatici.png" alt="">
                 <h5>Yenileyici Aydınlatıcı</h5>
               </div>
             </div>
 
-            <div>
+            <div class="out">
               <div class="card text-center">
                 <img class="card-img-top" src="img/aspir.png" alt="">
                 <h5>Kuşburnu Çekirdeği Yağı</h5>
               </div>
-            </div>
+            </div> 
 
 
           </div>
@@ -329,6 +327,7 @@
       aciklama.textContent = urunler[i].aciklama;
       urunDiv.appendChild(aciklama);
       aciklama.style.textAlign = "center";
+      aciklama.style.fontSize = "22px";
 
 
       const incelemeLink = document.createElement("a");
@@ -337,7 +336,9 @@
       incelemeButton.textContent = "Ürünü İncele";
       incelemeLink.appendChild(incelemeButton);
       urunDiv.appendChild(incelemeLink);
-
+      incelemeButton.style.fontSize="26px";
+      incelemeButton.style.borderRadius="5px";
+      incelemeButton.style.padding="10px 20px";
 
       urunlerAlani.appendChild(urunDiv);
     }
@@ -349,27 +350,57 @@
     //slider gorselleri icin obje
     var sliderImg = [
       {
-        imagePathh: "img/yenileyici-aydinlatici.png",
+        imagePath: "img/yenileyici-aydinlatici.png",
+        urunAdi:"Yenileyici ve Aydınlatıcı Göz Çevresi Serumu"
       },
       {
-        imagePathh: "img/argan.png",
+        imagePath: "img/argan.png",
+        urunAdi: "Kuşburnu Çekirdeği Yağı",
       },
       {
-        imagePathh: "img/jojoba.png",
+        imagePath: "img/jojoba.png",
+        urunAdi: "Jojoba Yağı",
       },
       {
-        imagePathh: "img/argan.png",
+        imagePath: "img/argan.png",
+        urunAdi: "Argan Yağı",
       },
       {
-        imagePathh: "img/aspir.png",
+        imagePath: "img/aspir.png",
+        urunAdi: "Aspir Yağı",
       },
       {
-        imagePathh: "img/kayisi.png",
+        imagePath: "img/kayisi.png",
+        urunAdi: "Kayısı Çekirdeği Yağı",
       },
       {
-        imagePathh: "img/gece-gorsel.png",
+        imagePath: "img/gece-gorsel.png",
+        urunAdi: "Yaşlanma Karşıtı Retinol Gece Serumu",
       }
     ];
+  
+  </script>
+
+  <script>
+    // slider foto çekme
+    
+    const sliderAlan = document.querySelector(".out");
+    
+    for(let i=0;i<sliderImg.length;i++){
+        
+        const urunDiv = document.createElement("div");
+        urunDiv.classList.add("urun");
+
+        const urunImg = document.createElement("img");
+      urunImg.src =sliderImg[i].imagePath;
+      urunDiv.appendChild(urunImg);
+      
+      const urunAdi = document.createElement("h5");
+      urunAdi.textContent = sliderImg[i].urunAdi;
+      urunDiv.appendChild(urunAdi);
+     
+      urunlerAlani.appendChild(urunDiv);
+    }
   </script>
 
 
