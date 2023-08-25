@@ -58,37 +58,6 @@
 
     }
 
-
-    .owl-nav {
-      display: none;
-    }
-
-    .owl-dots {
-      text-align: center;
-    }
-
-    .out{
-        display: table;
-        padding: 15px;
-    }
-    .card {
-      background: #fff;
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      margin: 15px;
-      border-radius: 20px;
-      border: 0;
-      width: 320px;
-      height: 320px;
-      display: table-cell;
-      vertical-align: middle;
-    }
-      .card-img-top {
-        max-width: 200px;
-        margin: 15px auto 0;
-        width: 200px;
-        
-      }
-
       .owl-item .urun{
         padding: 10px;
       }
@@ -99,35 +68,27 @@
         border-radius: 10px;
       }
       
-
-      p {
-        font-size: 18px;
-        color: #555;
-        padding-bottom: 15px;
+      .item .urun h2{
+        text-align: center;
+        font-size: 50px;
       }
-    
 
-    .center {
-      opacity: 1;
-
-      h5 {
+      .item .urun p{
+        text-align: center;
         font-size: 24px;
-
+        padding: 20px ;
       }
 
-      .card-img-top {
-        max-width: 100%;
-        height: 120px;
-        width: 120px;
+      .item .urun button{
+        font-size: 26px;
+        border: 3px solid green;
+        padding: 10px 20px;
+        border-radius: 5px; 
       }
-    }
 
+    
+  
 
-    @media (max-width: 767px) {
-      .gtco-testimonials {
-        margin-top: 20px;
-      }
-    }
     
   </style>
 </head>
@@ -147,13 +108,19 @@
 
         <div class="gtco-testimonials">
 
-
-           <div class="owl-carousel owl-carousel1 owl-theme">
-
-          </div>
+            
+           
+            <div class="owl-carousel owl-carousel1 owl-theme"> 
+            </div>
+            <button id="once">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            
+            <button id="sonra">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            
         </div>
-
-
 
       </div>
 
@@ -249,15 +216,13 @@
       const urunAdi = document.createElement("h2");
       urunAdi.textContent = urunler[i].urunAdi;
       urunDiv.appendChild(urunAdi);
-      urunAdi.style.textAlign = "center";
-      urunAdi.style.fontSize = "50px";
+     
 
 
       const aciklama = document.createElement("p");
       aciklama.textContent = urunler[i].aciklama;
       urunDiv.appendChild(aciklama);
-      aciklama.style.textAlign = "center";
-      aciklama.style.fontSize = "22px";
+
 
 
       const incelemeLink = document.createElement("a");
@@ -266,10 +231,7 @@
       incelemeButton.textContent = "Ürünü İncele";
       incelemeLink.appendChild(incelemeButton);
       urunDiv.appendChild(incelemeLink);
-      incelemeButton.style.fontSize="26px";
-      incelemeButton.style.borderRadius="5px";
-      incelemeButton.style.padding="10px 20px";
-
+      
       urunlerAlani.appendChild(urunDiv);
     }
   </script>
@@ -319,7 +281,7 @@
             },
             1000: {
               items: 3,
-              nav: true
+              nav: false
             }
           }
         });

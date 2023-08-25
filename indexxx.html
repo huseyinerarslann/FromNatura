@@ -2,345 +2,272 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Caprasimo&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Rubik:wght@300;500;600&family=Titillium+Web:ital@0;1&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Caprasimo&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Titillium+Web:ital@0;1&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Caprasimo&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Rubik:wght@300;500;600&family=Titillium+Web:ital@0;1&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Belanosima&family=Caprasimo&family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&family=Titillium+Web:ital@0;1&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="https://code.jquery.com/jquery-3.7.0.js"
-        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
 
-    <title>deneme</title>
-    <style>
-        .item {
-            padding: 50px 70px;
-        }
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        .urun-img {
-            display: block;
-            margin: auto;
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        .urun-adi {
-            text-align: center;
-            font-size: 40px;
-        }
+  <title>deneme</title>
+  <style>
+    body{
+        background-color: #f4f0e9;
+    }
+    .item {
+      padding: 50px 70px;
+    }
 
-        .aciklama {
-            text-align: center;
-            font-size: 20px;
-        }
+    .urun-img {
+      display: block;
+      margin: auto;
+    }
 
-        .slide {
-            width: 250px;
-            height: 300px;
-            border: 1px solid black;
-            border-radius: 5px;
-        }
+    .urun-adi {
+      text-align: center;
+      font-size: 40px;
+    }
 
-        .slider {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            display: grid;
-            grid-template-columns: auto auto auto;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 10px;
-        }
-
-        .slider img {
-            width: 250px;
-        }
+    .aciklama {
+      text-align: center;
+      font-size: 20px;
+    }
 
 
+    .gtco-testimonials {
+      position: relative;
+      margin-top: 30px;
+
+    }
 
 
+    .owl-nav {
+      display: none;
+    }
+
+    .owl-dots {
+      text-align: center;
+    }
+
+    
+    
+      .card-img-top {
+        max-width: 200px;
+        margin: 15px auto 0;
+        width: 200px;
+        
+      }
+
+      .owl-item .urun{
+        padding: 10px;
+      }
+
+      .owl-item .urun img{
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+      
+
+      p {
+        font-size: 18px;
+        color: #555;
+        padding-bottom: 15px;
+      }
+    
+
+    .center {
+      opacity: 1;
+
+      h5 {
+        font-size: 24px;
+
+      }
+
+      .card-img-top {
+        max-width: 100%;
+        height: 120px;
+        width: 120px;
+      }
+    }
 
 
-
-
-
-        /* Import Google font - Poppins */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-
-        .wrapper {
-            max-width: 1100px;
-            width: 100%;
-            position: relative;
-        }
-
-        .wrapper i {
-            top: 50%;
-            height: 50px;
-            width: 50px;
-            cursor: pointer;
-            font-size: 1.25rem;
-            position: absolute;
-            text-align: center;
-            line-height: 50px;
-            background: #fff;
-            border-radius: 50%;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-            transform: translateY(-50%);
-            transition: transform 0.1s linear;
-        }
-
-        .wrapper i:active {
-            transform: translateY(-50%) scale(0.85);
-        }
-
-        .wrapper i:first-child {
-            left: -22px;
-        }
-
-        .wrapper i:last-child {
-            right: -22px;
-        }
-
-        .wrapper .carousel {
-            display: grid;
-            grid-auto-flow: column;
-            grid-auto-columns: calc((100% / 3) - 12px);
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 16px;
-            border-radius: 8px;
-            scroll-behavior: smooth;
-            scrollbar-width: none;
-        }
-
-        .carousel::-webkit-scrollbar {
-            display: none;
-        }
-
-        .carousel.no-transition {
-            scroll-behavior: auto;
-        }
-
-        .carousel.dragging {
-            scroll-snap-type: none;
-            scroll-behavior: auto;
-        }
-
-        .carousel.dragging .card {
-            cursor: grab;
-            user-select: none;
-        }
-
-        .carousel :where(.card, .img) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .carousel .card {
-            scroll-snap-align: start;
-            height: 342px;
-            list-style: none;
-            background: #fff;
-            cursor: pointer;
-            padding-bottom: 15px;
-            flex-direction: column;
-            border-radius: 8px;
-        }
-
-        .img img {
-            width: 200px;
-            display: block;
-            margin: auto;
-        }
-
-        @media screen and (max-width: 900px) {
-            .wrapper .carousel {
-                grid-auto-columns: calc((100% / 2) - 9px);
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-            .wrapper .carousel {
-                grid-auto-columns: 100%;
-            }
-        }
-    </style>
+    @media (max-width: 767px) {
+      .gtco-testimonials {
+        margin-top: 20px;
+      }
+    }
+    
+  </style>
 </head>
 
 <body>
 
-    <div class="row">
-        <div class="col-6">
-            <div class="item">
-                <img class="urun-img" src="" alt="">
-                <h2 class="urunAdi"></h2>
-                <p class="aciklama"></p>
-                <a class="btn-link" href="#">
-                    <button></button>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-6">
-            <div style="position: relative;height: 100%;">
-                <!-- <div class="slider">
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-                    <div class="slide">
-                        <img src="img/argan.png">
-                    </div>
-
-
-                </div> -->
-
-
-
-                <!-- Slider deneme -->
-                <div class="wrapper">
-
-
-                    <ul class="carousel">
-                        <li class="card">
-                            <div class="img"><img src="img/argan.png" alt="img" draggable="false"></div>
-                        </li>
-
-                        <li class="card">
-                            <div class="img"><img src="img/argan.png" alt="img" draggable="false"></div>
-                        </li>
-
-                        <li class="card">
-                            <div class="img"><img src="img/argan.png" alt="img" draggable="false"></div>
-                        </li>
-
-                        <li class="card">
-                            <div class="img"><img src="img/argan.png" alt="img" draggable="false"></div>
-                        </li>
-
-                        <li class="card">
-                            <div class="img"><img src="img/argan.png" alt="img" draggable="false"></div>
-                        </li>
-
-                        <li class="card">
-                            <div class="img"><img src="img/argan.png" alt="img" draggable="false"></div>
-                        </li>
-                    </ul>
-
-
-                </div>
-
-
-
-
-
-            </div>
-
-
-        </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="item">
+        
+      </div>
     </div>
 
+    <div class="col-6">
+      <div style="position: relative;height: 100%;">
+     
+
+        <div class="gtco-testimonials">
+
+
+           <div class="owl-carousel owl-carousel1 owl-theme">
+
+          </div>
+        </div>
 
 
 
-    <script>
-        var urunler = [
-            {
-                id: 0,
-                imagePath: "img/yenileyici-aydinlatici.png",
-                urunAdi: "Yenileyici ve Aydınlatıcı Göz Çevresi Serumu",
-                aciklama: "From Natura Göz Çevresi Serumu, jojoba çekirdeği, üzüm çekirdeği, kayısı çekirdeği, nar çekirdeği ve hodan tohumu yağı ile cildi besler. Göz çevresinde kırışıklık karşıtı bakım sağlar. Kahve çekirdeği yağı, At kestanesi yağı ve kuşburnu çekirdeği yağı göz çevresinin aydınlatılmasına yardımcı olur. İçerdiği yüksek miktar E vitamini ve Itır yağı göz çevresinde antioksidan etki gösterir.",
-                href: "#"
-
-            },
-            {
-                id: 1,
-                imagePath: "img/argan.png",
-                urunAdi: "Kuşburnu Çekirdeği Yağı",
-                aciklama: "From Natura Kuşburnu Çekirdeği Yağı sadece soğuk pres saf kuşburnu çekirdeği yağını içerir. Pro vitamin A, Omega-3, Omega-6, E ve C vitaminleri açısından zengindir.",
-                href: "#"
-            },
-            {
-                id: 2,
-                imagePath: "img/jojoba.png",
-                urunAdi: "Jojoba Yağı",
-                aciklama: "Organik sertifikalı jojoba yağı, % 100 saf, soğuk sıkım jojoba çekirdeklerinden elde edilmiştir. Jojoba yağı, cilt sebuma benzeyen yapısı sayesinde yüksek emilim gösterir. ",
-                href: "#"
-
-            },
-            {
-
-                id: 3,
-                imagePath: "img/argan.png",
-                urunAdi: "Argan Yağı",
-                aciklama: "From Natura Argan Yağı soğuk sıkım yöntemi ile elde edilmiştir. Oleik asitvelinoleik asit açısından oldukça zengin cilt ve saç bakım yağıdır. Cildi ve saçı besler venemlendirir",
-                href: "#"
-
-            },
-            {
-                id: 4,
-                imagePath: "img/aspir.png",
-                urunAdi: "Aspir Yağı",
-                aciklama: "From Natura Aspir Yağı, Aspir bitkisinin yapraklarından elde edilen birbitkisel yağdır. Yaprakları, içeriğinde zengin salisilik asit barındırır. Aspir yağı da buyaprakların damıtılmasıyla elde edilir. Cildin daha parlak ve canlı görünmesini hedeflerkeniçeriğindeki E vitamini ve antioksidan özelliği cildin genç bir görünüm kazanmasına yardımcı olur.",
-                href: "#"
-
-            },
-            {
-                id: 5,
-                imagePath: "img/kayisi.png",
-                urunAdi: "Kayısı Çekirdeği Yağı",
-                aciklama: "From Natura Kayısı Çekirdeği Yağı, kayısı çekirdeklerinin soğuk presyöntemiyle işlenmesiyle elde edilen saf ve doğal bir bitkisel yağdır. Bu yöntem, yağın besindeğerlerinin korunmasını ve en yüksek kalitede üretilmesini sağlamaya yardımcı olur. Buyağın birçok sağlık faydası bulunmaktadır. Antioksidan özellikleri sayesinde yaşlanmayı geciktirmeye yardımcı olurken nemlendirici özellikleri sayesinde de cildi besleyerek yumuşatmayı hedefler.",
-                href: "#"
-
-            },
-            {
-                id: 6,
-                imagePath: "img/gece-gorsel.png",
-                urunAdi: "Yaşlanma Karşıtı Retinol Gece Serumu",
-                aciklama: "From Natura Gece Serumu, Anti-age aktifi retinol (%0,5) ve aydınlatıcı, yenileyici, çabuk emilen, yüksek E vitamini, omega 6 içeren, yağ asitlerince zengin değerli yağlardan oluşmaktadır.",
-                href: "#"
-
-            }
-
-        ];
-    </script>
-
-    <script>
-        //Obje Bileşenlerini İteme Çekme
-
-        //item class'ına ulaştık
-        const urunlerAlani = document.querySelector(".item");
+      </div>
 
 
-        for (let i = 0; i < urunler.length; i++) {
+    </div>
+  </div>
+
+
+
+
+  <script>
+    var urunler = [
+      {
+        id: 0,
+        imagePath: "img/yenileyici-aydinlatici.png",
+        urunAdi: "Yenileyici ve Aydınlatıcı Göz Çevresi Serumu",
+        aciklama: "From Natura Göz Çevresi Serumu, jojoba çekirdeği, üzüm çekirdeği, kayısı çekirdeği, nar çekirdeği ve hodan tohumu yağı ile cildi besler. Göz çevresinde kırışıklık karşıtı bakım sağlar. Kahve çekirdeği yağı, At kestanesi yağı ve kuşburnu çekirdeği yağı göz çevresinin aydınlatılmasına yardımcı olur. İçerdiği yüksek miktar E vitamini ve Itır yağı göz çevresinde antioksidan etki gösterir.",
+        href: "#"
+
+      },
+      {
+        id: 1,
+        imagePath: "img/argan.png",
+        urunAdi: "Kuşburnu Çekirdeği Yağı",
+        aciklama: "From Natura Kuşburnu Çekirdeği Yağı sadece soğuk pres saf kuşburnu çekirdeği yağını içerir. Pro vitamin A, Omega-3, Omega-6, E ve C vitaminleri açısından zengindir.",
+        href: "#"
+      },
+      {
+        id: 2,
+        imagePath: "img/jojoba.png",
+        urunAdi: "Jojoba Yağı",
+        aciklama: "Organik sertifikalı jojoba yağı, % 100 saf, soğuk sıkım jojoba çekirdeklerinden elde edilmiştir. Jojoba yağı, cilt sebuma benzeyen yapısı sayesinde yüksek emilim gösterir. ",
+        href: "#"
+
+      },
+      {
+
+        id: 3,
+        imagePath: "img/argan.png",
+        urunAdi: "Argan Yağı",
+        aciklama: "From Natura Argan Yağı soğuk sıkım yöntemi ile elde edilmiştir. Oleik asitvelinoleik asit açısından oldukça zengin cilt ve saç bakım yağıdır. Cildi ve saçı besler venemlendirir",
+        href: "#"
+
+      },
+      {
+        id: 4,
+        imagePath: "img/aspir.png",
+        urunAdi: "Aspir Yağı",
+        aciklama: "From Natura Aspir Yağı, Aspir bitkisinin yapraklarından elde edilen birbitkisel yağdır. Yaprakları, içeriğinde zengin salisilik asit barındırır. Aspir yağı da buyaprakların damıtılmasıyla elde edilir. Cildin daha parlak ve canlı görünmesini hedeflerkeniçeriğindeki E vitamini ve antioksidan özelliği cildin genç bir görünüm kazanmasına yardımcı olur.",
+        href: "#"
+
+      },
+      {
+        id: 5,
+        imagePath: "img/kayisi.png",
+        urunAdi: "Kayısı Çekirdeği Yağı",
+        aciklama: "From Natura Kayısı Çekirdeği Yağı, kayısı çekirdeklerinin soğuk presyöntemiyle işlenmesiyle elde edilen saf ve doğal bir bitkisel yağdır. Bu yöntem, yağın besindeğerlerinin korunmasını ve en yüksek kalitede üretilmesini sağlamaya yardımcı olur. Buyağın birçok sağlık faydası bulunmaktadır. Antioksidan özellikleri sayesinde yaşlanmayı geciktirmeye yardımcı olurken nemlendirici özellikleri sayesinde de cildi besleyerek yumuşatmayı hedefler.",
+        href: "#"
+
+      },
+      {
+        id: 6,
+        imagePath: "img/gece-gorsel.png",
+        urunAdi: "Yaşlanma Karşıtı Retinol Gece Serumu",
+        aciklama: "From Natura Gece Serumu, Anti-age aktifi retinol (%0,5) ve aydınlatıcı, yenileyici, çabuk emilen, yüksek E vitamini, omega 6 içeren, yağ asitlerince zengin değerli yağlardan oluşmaktadır.",
+        href: "#"
+
+      }
+
+    ];
+  </script>
+
+  <script>
+    //Obje Bileşenlerini İteme Çekme
+
+    //item class'ına ulaştık
+    const urunlerAlani = document.querySelector(".item");
+
+
+    for (let i = 0; i < urunler.length; i++) {
+
+
+      const urunDiv = document.createElement("div");
+      urunDiv.classList.add("urun");
+
+      const urunImg = document.createElement("img");
+      urunImg.src = urunler[i].imagePath;
+      urunDiv.appendChild(urunImg);
+      urunImg.style.display = "block";
+      urunImg.style.margin = "auto";
+
+
+      const urunAdi = document.createElement("h2");
+      urunAdi.textContent = urunler[i].urunAdi;
+      urunDiv.appendChild(urunAdi);
+      urunAdi.style.textAlign = "center";
+      urunAdi.style.fontSize = "50px";
+
+
+      const aciklama = document.createElement("p");
+      aciklama.textContent = urunler[i].aciklama;
+      urunDiv.appendChild(aciklama);
+      aciklama.style.textAlign = "center";
+      aciklama.style.fontSize = "22px";
+
+
+      const incelemeLink = document.createElement("a");
+      incelemeLink.href = urunler[i].href;
+      const incelemeButton = document.createElement("button");
+      incelemeButton.textContent = "Ürünü İncele";
+      incelemeLink.appendChild(incelemeButton);
+      urunDiv.appendChild(incelemeLink);
+      incelemeButton.style.fontSize="26px";
+      incelemeButton.style.borderRadius="5px";
+      incelemeButton.style.padding="10px 20px";
+
+      urunlerAlani.appendChild(urunDiv);
+    }
+  </script>
+
+
+  <script>
+    // slider foto çekme
+    const urunlerAlan = document.querySelector(".owl-carousel");
+    
+    
+    for (let i = 0; i < urunler.length; i++) {
 
 
             const urunDiv = document.createElement("div");
@@ -349,149 +276,62 @@
             const urunImg = document.createElement("img");
             urunImg.src = urunler[i].imagePath;
             urunDiv.appendChild(urunImg);
-            urunImg.style.display = "block";
-            urunImg.style.margin = "auto";
+            
+            urunlerAlan.appendChild(urunDiv);
+    }
+
+  </script>
 
 
-            const urunAdi = document.createElement("h2");
-            urunAdi.textContent = urunler[i].urunAdi;
-            urunDiv.appendChild(urunAdi);
-            urunAdi.style.textAlign = "center";
-            urunAdi.style.fontSize = "50px";
+  <script>
+    (function () {
+      "use strict";
 
-
-            const aciklama = document.createElement("p");
-            aciklama.textContent = urunler[i].aciklama;
-            urunDiv.appendChild(aciklama);
-            aciklama.style.textAlign = "center";
-
-
-            const incelemeLink = document.createElement("a");
-            incelemeLink.href = urunler[i].href;
-            const incelemeButton = document.createElement("button");
-            incelemeButton.textContent = "Ürünü İncele";
-            incelemeLink.appendChild(incelemeButton);
-            urunDiv.appendChild(incelemeLink);
-
-
-            urunlerAlani.appendChild(urunDiv);
-        }
-    </script>
-
-
-
-    <script>
-        //slider gorselleri icin obje
-        var sliderImg = [
-            {
-                imagePathh: "img/yenileyici-aydinlatici.png",
+      var carousels = function () {
+        $(".owl-carousel1").owlCarousel({
+          loop: true,
+          center: true,
+          margin: 0,
+          responsiveClass: true,
+          nav: false,
+          responsive: {
+            0: {
+              items: 1,
+              nav: false
             },
-            {
-                imagePathh: "img/argan.png",
+            680: {
+              items: 2,
+              nav: false,
+              loop: false
             },
-            {
-                imagePathh: "img/jojoba.png",
-            },
-            {
-                imagePathh: "img/argan.png",
-            },
-            {
-                imagePathh: "img/aspir.png",
-            },
-            {
-                imagePathh: "img/kayisi.png",
-            },
-            {
-                imagePathh: "img/gece-gorsel.png",
+            1000: {
+              items: 3,
+              nav: true
             }
-        ];
-    </script>
-
-
-
-    <script>
-        //slider icin
-        const wrapper = document.querySelector(".wrapper");
-        const carousel = document.querySelector(".carousel");
-        const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-        const carouselChildrens = [...carousel.children];
-
-        let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
-        // Get the number of cards that can fit in the carousel at once
-        let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-        // Insert copies of the last few cards to beginning of carousel for infinite scrolling
-        carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
-            carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+          }
         });
-        // Insert copies of the first few cards to end of carousel for infinite scrolling
-        carouselChildrens.slice(0, cardPerView).forEach(card => {
-            carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-        });
+      };
 
-        // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.offsetWidth;
-        carousel.classList.remove("no-transition");
-        // Add event listeners for the arrow buttons to scroll the carousel left and right
+      (function ($) {
+        carousels();
+      })(jQuery);
+    })();
 
-        const dragStart = (e) => {
-            isDragging = true;
-            carousel.classList.add("dragging");
-            // Records the initial cursor and scroll position of the carousel
-            startX = e.pageX;
-            startScrollLeft = carousel.scrollLeft;
-        }
-        const dragging = (e) => {
-            if (!isDragging) return; // if isDragging is false return from here
-            // Updates the scroll position of the carousel based on the cursor movement
-            carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-        }
-        const dragStop = () => {
-            isDragging = false;
-            carousel.classList.remove("dragging");
-        }
-        const infiniteScroll = () => {
-            // If the carousel is at the beginning, scroll to the end
-            if (carousel.scrollLeft === 0) {
-                carousel.classList.add("no-transition");
-                carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
-                carousel.classList.remove("no-transition");
-            }
-            // If the carousel is at the end, scroll to the beginning
-            else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
-                carousel.classList.add("no-transition");
-                carousel.scrollLeft = carousel.offsetWidth;
-                carousel.classList.remove("no-transition");
-            }
-            // Clear existing timeout & start autoplay if mouse is not hovering over carousel
-            clearTimeout(timeoutId);
-            if (!wrapper.matches(":hover")) autoPlay();
-        }
-        const autoPlay = () => {
-            if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
-            // Autoplay the carousel after every 2500 ms
-            timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
-        }
-        autoPlay();
-        carousel.addEventListener("mousedown", dragStart);
-        carousel.addEventListener("mousemove", dragging);
-        document.addEventListener("mouseup", dragStop);
-        carousel.addEventListener("scroll", infiniteScroll);
-        wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-        wrapper.addEventListener("mouseleave", autoPlay);
-    </script>
+  </script>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
